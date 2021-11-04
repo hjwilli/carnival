@@ -45,7 +45,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: carnival/docs
+          FOLDER: docs
           CLEAN: false # Automatically remove deleted files from the deploy branch
   
 

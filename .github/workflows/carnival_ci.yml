@@ -33,13 +33,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Build Docker Images
-        run: |
-          docker-compose -f ./docker-compose-doc.yml build
+      #- name: Build Docker Images
+      #  run: |
+      #    docker-compose -f ./docker-compose-doc.yml build
       # Building docs # Tell GitHub not to use jekyll to compile the docs
-      - name: Building Docs
-        run: |
-          docker-compose -f ./docker-compose-doc.yml up --abort-on-container-exit --force-recreate
+      #- name: Building Docs
+      #  run: |
+      #    docker-compose -f ./docker-compose-doc.yml up --abort-on-container-exit --force-recreate
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
